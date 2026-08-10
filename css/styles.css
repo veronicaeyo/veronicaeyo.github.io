@@ -10565,3 +10565,142 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+/* Custom portfolio polish */
+body {
+  color: #26313f;
+  background: #fbfcfd;
+}
+
+h1,
+h2,
+h3 {
+  color: #162033;
+}
+
+h1 .text-primary,
+.text-primary {
+  color: #0f8b8d !important;
+}
+
+.bg-primary {
+  background: linear-gradient(180deg, #152238 0%, #0f3d4c 58%, #0f8b8d 100%) !important;
+}
+
+.subheading {
+  color: #566171;
+}
+
+#about {
+  background:
+    linear-gradient(135deg, rgba(15, 139, 141, 0.08), rgba(240, 164, 51, 0.10)),
+    #ffffff;
+}
+
+#about .lead {
+  color: #1e2a3a;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-highlights span {
+  border: 1px solid rgba(15, 139, 141, 0.25);
+  border-left: 4px solid #0f8b8d;
+  background: #ffffff;
+  color: #162033;
+  font-weight: 700;
+  padding: 0.65rem 0.85rem;
+  box-shadow: 0 10px 24px rgba(22, 32, 51, 0.08);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.impact-card {
+  border: 1px solid rgba(22, 32, 51, 0.10);
+  border-top: 4px solid #f0a433;
+  background: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 16px 32px rgba(22, 32, 51, 0.10);
+}
+
+.impact-card strong {
+  display: block;
+  color: #0f8b8d;
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.impact-card span {
+  display: block;
+  color: #495567;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+#experience .d-flex,
+#projects .d-flex {
+  border-left: 4px solid rgba(15, 139, 141, 0.35);
+  padding-left: 1.25rem;
+  margin-bottom: 2.25rem;
+}
+
+#experience .d-flex:first-of-type,
+.project-callout {
+  border-left-color: #f0a433;
+  background: linear-gradient(90deg, rgba(240, 164, 51, 0.12), rgba(255, 255, 255, 0));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.featured-media {
+  background: #ffffff;
+  border: 1px solid rgba(22, 32, 51, 0.10);
+  padding: 0.75rem;
+  box-shadow: 0 18px 40px rgba(22, 32, 51, 0.10);
+}
+
+.featured-media img {
+  object-fit: cover;
+  max-height: 510px;
+}
+
+.featured-media figcaption {
+  color: #566171;
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+}
+
+.social-icons .social-icon {
+  background-color: #162033;
+}
+
+.social-icons .social-icon:hover {
+  background-color: #0f8b8d;
+}
+
+@media (max-width: 767.98px) {
+  body {
+    text-align: left !important;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .featured-media img {
+    height: auto !important;
+    max-height: none;
+  }
+}
