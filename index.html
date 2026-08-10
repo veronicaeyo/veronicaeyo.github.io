@@ -528,17 +528,42 @@
         </div>
         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="flex-grow-1">
-            <h3 class="mb-0">Decoding Mental Health: Unveiling Depression Predictions from Tweets through Sentiment Analysis and Topic Modeling</h3>
-            <div class="subheading mb-4">Python, Pandas, NLP, Bertopic, Topic Modeling, Sentiment Analysis, Machine Learning
+            <h3 class="mb-0">Wellness Support NLP Assistant: Sentiment, Topic Signals & Journaling</h3>
+            <div class="subheading mb-4">Python, Streamlit, NLP, Scikit-learn, TF-IDF, BERTopic, Responsible AI
             </div>
-            <p style="text-align:justify;"> The project focuses on utilizing sentiment analysis and topic modeling, 
-              to predict depression in patients based on their tweets. 
-              The process involves loading a dataset containing tweets and labels,
-               preprocessing the data by converting it to lowercase, removing special characters and stopwords, and lemmatization. 
-              Topics are created and visualized, followed by feature engineering, model creation, evaluation, 
-              and visualization of a confusion matrix. 
-              The Bertopic model is employed for topic identification, and an intertopic map is generated.
+            <p style="text-align:justify;"> Built a supportive, non-diagnostic NLP wellness assistant that analyzes
+              short text for emotional wellbeing signals. The project combines text preprocessing, saved machine
+              learning models, optional transformer fallback, topic modeling, wellness summaries, explanation panels,
+              support resources, journaling, and a small dashboard for reflective use.
             </p>
+            <div class="wellness-stream" id="wellness-stream">
+              <div class="wellness-stream-header">
+                <div>
+                  <span class="demo-label">Live Wellness NLP Conversation Stream</span>
+                  <h4>Animated synthetic check-ins with supportive model responses</h4>
+                </div>
+                <span class="ethics-pill">Educational prototype, not medical advice</span>
+              </div>
+              <div class="wellness-stage">
+                <div class="wellness-chat" id="wellness-chat" aria-live="polite"></div>
+                <div class="wellness-side-panel">
+                  <div class="signal-card">
+                    <span>Signal</span>
+                    <strong id="wellness-signal">Possible emotional concern</strong>
+                  </div>
+                  <div class="signal-card">
+                    <span>Confidence</span>
+                    <strong id="wellness-confidence">0.91</strong>
+                  </div>
+                  <div class="signal-card">
+                    <span>Source</span>
+                    <strong id="wellness-source">fallback model</strong>
+                  </div>
+                  <div class="topic-strip" id="wellness-topics"></div>
+                </div>
+              </div>
+              <p class="wellness-note">Synthetic examples only. The app supports reflection and help-seeking; it does not diagnose depression or replace professional care.</p>
+            </div>
           </div>
           <div class="flex-shrink-0">
             <span class="text-right"> May 2023 <br>
@@ -711,6 +736,7 @@
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
   <script src="js/plantpulse-demo.js"></script>
+  <script src="js/wellness-demo.js"></script>
 </body>
 
 </html>
