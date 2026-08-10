@@ -10682,6 +10682,104 @@ h1 .text-primary,
   margin-top: 0.75rem;
 }
 
+.plantpulse-demo {
+  margin-top: 1.5rem;
+  border: 1px solid rgba(15, 139, 141, 0.28);
+  background: #ffffff;
+  box-shadow: 0 18px 42px rgba(22, 32, 51, 0.12);
+}
+
+.plantpulse-demo-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(22, 32, 51, 0.10);
+}
+
+.plantpulse-demo-header h4 {
+  margin: 0.2rem 0 0;
+  color: #162033;
+  font-size: 1.25rem;
+}
+
+.plantpulse-demo-header a {
+  align-self: flex-start;
+  color: #0f8b8d;
+  font-weight: 800;
+}
+
+.demo-label {
+  display: block;
+  color: #f0a433;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.plantpulse-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: 1rem;
+}
+
+.plantpulse-actions button {
+  border: 1px solid rgba(15, 139, 141, 0.35);
+  background: #f7fbfb;
+  color: #162033;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 0.6rem 0.85rem;
+}
+
+.plantpulse-actions button:hover,
+.plantpulse-actions button:focus {
+  background: #0f8b8d;
+  color: #ffffff;
+}
+
+.plantpulse-output {
+  margin: 0 1rem 1rem;
+  background: #111827;
+  color: #d1fae5;
+  overflow: hidden;
+}
+
+.terminal-bar {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.75rem;
+  background: #0b1220;
+}
+
+.terminal-bar span {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #ef4444;
+}
+
+.terminal-bar span:nth-child(2) {
+  background: #f59e0b;
+}
+
+.terminal-bar span:nth-child(3) {
+  background: #10b981;
+}
+
+.plantpulse-output pre {
+  margin: 0;
+  max-height: 28rem;
+  overflow: auto;
+  padding: 1rem;
+  color: #d1fae5;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
 .social-icons .social-icon {
   background-color: #162033;
 }
@@ -10702,5 +10800,9 @@ h1 .text-primary,
   .featured-media img {
     height: auto !important;
     max-height: none;
+  }
+
+  .plantpulse-demo-header {
+    display: block;
   }
 }

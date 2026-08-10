@@ -426,6 +426,48 @@
         <h2 class="mb-5">Projects</h2>
         <div class="d-flex flex-column flex-md-row justify-content-between mb-5 project-callout">
           <div class="flex-grow-1">
+            <h3 class="mb-0">PlantPulse MCP: Oil & Gas I&C Analytics Assistant</h3>
+            <div class="subheading mb-4">MCP, Python, SQL, Instrumentation & Controls, Oil & Gas Analytics, Agentic AI
+            </div>
+            <p style="text-align:justify;"> Created a portfolio-safe MCP-style analytics assistant for oil and gas
+              instrumentation and controls. The assistant works with synthetic plant data for pressure transmitters,
+              control valves, flow meters, level transmitters, gas detectors, and vibration sensors, then uses governed
+              tools to diagnose loop issues, summarize alarm behavior, rank calibration risk, and recommend maintenance
+              actions for operations teams.
+            </p>
+            <div class="plantpulse-demo" id="plantpulse-demo">
+              <div class="plantpulse-demo-header">
+                <div>
+                  <span class="demo-label">Live Portfolio Demo</span>
+                  <h4>Ask the MCP tools about plant instrument health</h4>
+                </div>
+                <a href="https://github.com/veronicaeyo/plantpulse-mcp" target="_blank" rel="noopener">View GitHub repo</a>
+              </div>
+              <div class="plantpulse-actions" role="group" aria-label="PlantPulse MCP demo scenarios">
+                <button type="button" data-demo="critical">Critical assets</button>
+                <button type="button" data-demo="diagnose">Diagnose CV-112</button>
+                <button type="button" data-demo="maintenance">Maintenance plan</button>
+                <button type="button" data-demo="report">Generate report</button>
+              </div>
+              <div class="plantpulse-output" aria-live="polite">
+                <div class="terminal-bar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <pre id="plantpulse-output">Select a scenario to see an MCP-style tool call and governed analytics response.</pre>
+              </div>
+            </div>
+          </div>
+          <div class="flex-shrink-0">
+            <span class="text-right"> 2026 <br>
+              <a class="button" href="https://github.com/veronicaeyo/plantpulse-mcp" target="_blank" rel="noopener"><button> <i
+                    class="fas fa-folder-open"></i></button></a>
+            </span>
+          </div>
+        </div>
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5 project-callout">
+          <div class="flex-grow-1">
             <h3 class="mb-0">Agentic Analytics Assistant Capabilities</h3>
             <div class="subheading mb-4">MCP, AI Agents, Python, SQL, Excel/PDF Reporting, Governed Analytics
             </div>
@@ -666,6 +708,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
+  <script src="js/plantpulse-demo.js"></script>
 </body>
 
 </html>
