@@ -10740,6 +10740,15 @@ h1 .text-primary,
   color: #ffffff;
 }
 
+.plantpulse-note {
+  margin: 0 1rem 1rem;
+  border-left: 4px solid #f0a433;
+  background: rgba(240, 164, 51, 0.10);
+  color: #26313f;
+  font-weight: 700;
+  padding: 0.75rem 0.9rem;
+}
+
 .plantpulse-output {
   margin: 0 1rem 1rem;
   background: #111827;

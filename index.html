@@ -426,36 +426,36 @@
         <h2 class="mb-5">Projects</h2>
         <div class="d-flex flex-column flex-md-row justify-content-between mb-5 project-callout">
           <div class="flex-grow-1">
-            <h3 class="mb-0">PlantPulse MCP: Oil & Gas I&C Analytics Assistant</h3>
-            <div class="subheading mb-4">MCP, Python, SQL, Instrumentation & Controls, Oil & Gas Analytics, Agentic AI
+            <h3 class="mb-0">PlantPulse MCP: Oil & Gas I&C Chat Analytics Assistant</h3>
+            <div class="subheading mb-4">MCP, FastAPI, Gradio, SQLite, Python, Instrumentation & Controls, Oil & Gas Analytics
             </div>
-            <p style="text-align:justify;"> Created a portfolio-safe MCP-style analytics assistant for oil and gas
-              instrumentation and controls. The assistant works with synthetic plant data for pressure transmitters,
-              control valves, flow meters, level transmitters, gas detectors, and vibration sensors, then uses governed
-              tools to diagnose loop issues, summarize alarm behavior, rank calibration risk, and recommend maintenance
-              actions for operations teams.
+            <p style="text-align:justify;"> Built a portfolio-safe oil and gas instrumentation analytics assistant
+              using synthetic plant data. Users can chat with PlantPulse, select instruments or locations, review asset
+              health, diagnose control-loop issues, summarize alarms, identify calibration risks, forecast production
+              and demand trends, and export results as HTML, PDF, or Excel files.
             </p>
             <div class="plantpulse-demo" id="plantpulse-demo">
               <div class="plantpulse-demo-header">
                 <div>
-                  <span class="demo-label">Live Portfolio Demo</span>
-                  <h4>Ask the MCP tools about plant instrument health</h4>
+                  <span class="demo-label">Live Client/Server Demo</span>
+                  <h4>Ask PlantPulse about instrument health, risk, and maintenance</h4>
                 </div>
                 <a href="https://github.com/veronicaeyo/plantpulse-mcp" target="_blank" rel="noopener">View GitHub repo</a>
               </div>
               <div class="plantpulse-actions" role="group" aria-label="PlantPulse MCP demo scenarios">
-                <button type="button" data-demo="critical">Critical assets</button>
+                <button type="button" data-demo="hi">Say Hi</button>
                 <button type="button" data-demo="diagnose">Diagnose CV-112</button>
-                <button type="button" data-demo="maintenance">Maintenance plan</button>
-                <button type="button" data-demo="report">Generate report</button>
+                <button type="button" data-demo="risk">Show asset risk</button>
+                <button type="button" data-demo="exports">Preview exports</button>
               </div>
+              <p class="plantpulse-note">Includes SQLite chat history and browser previews for HTML, PDF, and Excel exports.</p>
               <div class="plantpulse-output" aria-live="polite">
                 <div class="terminal-bar">
                   <span></span>
                   <span></span>
                   <span></span>
                 </div>
-                <pre id="plantpulse-output">Select a scenario to see an MCP-style tool call and governed analytics response.</pre>
+                <pre id="plantpulse-output">Select a workflow to preview the PlantPulse chat experience.</pre>
               </div>
             </div>
           </div>

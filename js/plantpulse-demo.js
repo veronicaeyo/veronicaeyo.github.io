@@ -7,56 +7,82 @@
   }
 
   const scenarios = {
-    critical: {
-      prompt: "run_governed_query(query_name='critical_assets')",
-      response: {
-        rows: [
-          { tag: "CV-112", asset: "Control Valve", area: "Crude Stabilization", risk: 97, signal: "HART", finding: "Overdue calibration and frequent loop alarms" },
-          { tag: "LT-401", asset: "Level Transmitter", area: "Separator Train", risk: 92, signal: "4-20mA", finding: "Out-of-range level reading with rising drift" },
-          { tag: "VS-220", asset: "Vibration Sensor", area: "Export Pump", risk: 79, signal: "WirelessHART", finding: "Pump vibration reading above normal band" }
-        ]
-      }
-    },
+    hi: `> Hi
+
+Welcome to PlantPulse.
+
+I help you review synthetic oil and gas instrumentation data. You can ask about asset health, loop diagnosis, alarms, calibration, maintenance priorities, production forecasts, manufacturer failure patterns, and dashboard KPIs.
+
+Available instruments:
+- PT-204: Pressure Transmitter, Gas Compression
+- CV-112: Control Valve, Crude Stabilization
+- FT-330: Flow Transmitter, Produced Water
+- LT-401: Level Transmitter, Separator Train
+- GD-018: Gas Detector, Metering Skid
+- VS-220: Vibration Sensor, Export Pump`,
     diagnose: {
-      prompt: "diagnose_loop(tag='CV-112')",
-      response: {
-        tag: "CV-112",
-        service: "Stabilizer pressure control",
-        risk_band: "high",
-        findings: [
-          "Frequent alarms indicate unstable loop behavior or noisy measurement.",
-          "Measured drift is above preferred tolerance for reliable control.",
-          "Calibration is overdue."
-        ],
-        recommended_actions: [
-          "Review alarm rationalization, controller tuning, and recent process disturbances.",
-          "Schedule calibration check and compare valve positioner feedback against field observation.",
-          "Validate transmitter output against a reference standard before optimization decisions."
-        ]
-      }
+      prompt: "Diagnose CV-112",
+      reply: `CV-112 is a control valve in Crude Stabilization.
+
+Risk: High
+
+Key findings:
+- Alarm frequency is elevated for the last 7 days.
+- Drift is above preferred tolerance for reliable control.
+- Calibration is overdue.
+
+Recommended next steps:
+1. Review recent process disturbances and alarm history.
+2. Check valve response and positioner feedback.
+3. Complete calibration before using this loop for optimization decisions.`
     },
-    maintenance: {
-      prompt: "recommend_maintenance(risk_threshold=60)",
-      response: {
-        recommendations: [
-          { priority: "P1", tag: "CV-112", area: "Crude Stabilization", action: "Tune loop and complete overdue calibration." },
-          { priority: "P1", tag: "LT-401", area: "Separator Train", action: "Inspect level transmitter, impulse lines, and separator operating condition." },
-          { priority: "P2", tag: "VS-220", area: "Export Pump", action: "Inspect bearing vibration trend and schedule pump reliability review." }
-        ]
-      }
+    risk: {
+      prompt: "Show asset risk",
+      reply: `Here are the highest-risk synthetic instruments:
+
+1. CV-112 | Control Valve | Crude Stabilization
+   Risk: High
+   Reason: overdue calibration, frequent alarms, loop instability indicators
+
+2. LT-401 | Level Transmitter | Separator Train
+   Risk: High
+   Reason: out-of-range reading, elevated alarms, calibration due soon
+
+3. VS-220 | Vibration Sensor | Export Pump
+   Risk: Medium-High
+   Reason: vibration reading above normal band and rising trend
+
+Suggested workflow:
+- Prioritize CV-112 and LT-401 for immediate maintenance review.
+- Add VS-220 to the reliability watchlist.`
     },
-    report: {
-      prompt: "generate_report(area='Crude Stabilization')",
-      response: {
-        report: [
-          "PlantPulse MCP I&C Analytics Report",
-          "Scope: Crude Stabilization",
-          "Assets reviewed: 1",
-          "Top risk: CV-112, Stabilizer pressure control, risk 97/high",
-          "Recommended action: tune loop, inspect valve response, and complete overdue calibration"
-        ]
-      }
-    }
+    exports: {
+      prompt: "Preview exports",
+      reply: `PlantPulse generated browser previews and downloadable files.
+
+HTML preview:
+- Asset health dashboard
+- Alarm summary by location
+- Calibration risk table
+- Maintenance priority list
+
+PDF preview:
+- Executive summary
+- Top instrument risks
+- Recommended actions
+
+Excel preview:
+- asset_health.xlsx
+- alarms_by_area.xlsx
+- calibration_due.xlsx
+- production_forecast.xlsx
+
+SQLite chat history:
+- User prompt
+- Selected instrument/location filters
+- Assistant response
+- Export request metadata`
+    },
   };
 
   function renderScenario(key) {
@@ -64,12 +90,12 @@
     if (!scenario) {
       return;
     }
-    output.textContent = `> ${scenario.prompt}\n\n${JSON.stringify(scenario.response, null, 2)}`;
+    output.textContent = typeof scenario === "string" ? scenario : `> ${scenario.prompt}\n\n${scenario.reply}`;
   }
 
   demo.querySelectorAll("[data-demo]").forEach((button) => {
     button.addEventListener("click", () => renderScenario(button.dataset.demo));
   });
 
-  renderScenario("critical");
+  renderScenario("hi");
 })();
